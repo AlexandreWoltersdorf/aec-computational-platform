@@ -26,7 +26,7 @@ Engines that consume the Core object to generate results.
 ---
 
 ## 📂 Repository Structure
-
+<pre>
 aec-computational-platform/
 ├── connectors/           # [INPUT] Bridges to external software
 │   ├── speckle.py
@@ -40,3 +40,4 @@ aec-computational-platform/
     ├── acoustics/        # ISO 10140 Simulation & Visualization
     ├── thermal/          # Heat transfer calculation
     └── fabrication/      # Cutting lists (BOM) & CNC data
+</pre>

@@ -20,7 +20,7 @@ The goal is to determine the wall thickness required to reach the **Passive Hous
       <br><em>Fig 1. Thickness Optimization (Target U=0.14)</em>
     </td>
     <td width="50%" align="center">
-      <img src="../../../assets/thermal_static_gradient.jpg" width="100%">
+      <img src="docs/thermal_static_gradient.jpg" width="100%">
       <br><em>Fig 2. Temperature Gradient Profile</em>
     </td>
   </tr>
@@ -46,11 +46,11 @@ We compare the Lattice system (filled with high-density Wood Fibre) against a st
 <!-- DYNAMIC IMAGES -->
 <table border="0" width="100%">
   <tr>
-    <td width="33%" align="center">
+    <td width="50%" align="center">
       <img src="docs/thermal_dynamic_shift.png" width="100%">
       <br><em>Fig 3. Phase Shift Comparison</em>
     </td>
-    <td width="66%" align="center">
+    <td width="50%" align="center">
       <img src="docs/thermal_dynamic_wave.png" width="100%">
       <br><em>Fig 4. Heat Wave Damping (Sinusoidal Simulation)</em>
     </td>

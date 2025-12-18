@@ -45,10 +45,30 @@ This module acts as the **Single Source of Truth**, decoupling the input source 
   </tr>
 </table>
 
-### 3. Solvers (Output)
-Engines that consume the Core object to generate results.
-*   **Physics Solvers:** Acoustics ($R_w$), Thermal ($U-value$), Carbon ($CO_2$).
-*   **Fabrication Solvers:** Cutting lists (BOM), Assembly guides.
+## 3. Solvers (Output)
+
+The platform features a dedicated Physics Engine that consumes the `Core` object to simulate multi-physical performance.
+Results are benchmarked against standard construction methods (Concrete, CLT) to validate the system's viability.
+
+### 🔊 Acoustics Solver
+*   **Objective:** Predict the weighted Sound Reduction Index ($R_w$) for complex double-shell assemblies.
+*   **Methodology:** Implements the **Sharp & Cremer Law** for Mass-Spring-Mass systems, accounting for critical frequency ($f_c$) and resonance ($f_0$).
+*   **Key Insight:** The Lattice system achieves high acoustic performance despite its light weight by leveraging the mechanical decoupling of the double-shell structure.
+
+### 🌡️ Thermal Solver
+*   **Objective:** Optimize Winter Insulation ($U-value$) and Summer Comfort (Phase Shift).
+*   **Methodology:**
+    *   **Static:** ISO 6946 (Combined Method) for condensation risk and thickness optimization.
+    *   **Dynamic:** **ISO 13786 (Matrix Transfer Method)** using `becalib` to simulate heat wave damping.
+*   **Key Insight:** The system delivers a **15.3-hour Phase Shift** (vs. 7.9h for Concrete), proving that wood fibre density provides superior thermal inertia for summer comfort.
+
+### 🌍 Carbon Solver (RE2020)
+*   **Objective:** Assess the Carbon Weight ($kgCO_2eq/m^2$) under the RE2020 Dynamic LCA standard.
+*   **Methodology:** Dynamic lifecycle assessment ($Ic_{component}$) using certified **INIES FDES** data, integrating production impacts (A1-A5), weighted end-of-life (C1-C4), and biogenic credits (Module D).
+*   **Key Insight:** The Lattice system offers the best trade-off: it achieves a **Net Negative Carbon Footprint** by minimizing material usage (low production impact) while maximizing biogenic storage in the wood fibre insulation.
+
+### 🏗️ Fabrication Solver
+*   **Output:** Automated generation of Cutting Lists (BOM) and Assembly Guides directly from the `Core` geometry.
 
 ---
 

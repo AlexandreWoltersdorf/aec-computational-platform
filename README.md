@@ -37,7 +37,10 @@ aec-computational-platform/
 │   └── materials.py      # Physical Material Database
 │
 └── solvers/              # [OUTPUT] Analysis & Fabrication Engines
-    ├── acoustics/        # ISO 10140 Simulation & Visualization
-    ├── thermal/          # Heat transfer calculation
-    └── fabrication/      # Cutting lists (BOM) & CNC data
+    ├── physics/          # Design Analysis
+    │   ├── acoustics/    # Sound (Rw) / ISO 10140 Simulation & Visualization
+    │   └── thermal/      # Heat transfer calculation (U-value)
+    └── production/       # Construction Analysis
+        ├── fabrication/  # Cutting lists (BOM)
+        └── logistics/    # Lifting weight & COG
 </pre>

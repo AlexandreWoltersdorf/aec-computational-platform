@@ -20,7 +20,7 @@ The goal is to determine the wall thickness required to reach the **Passive Hous
       <br><em>Fig 1. Thickness Optimization (Target U=0.14)</em>
     </td>
     <td width="50%" align="center">
-      <img src="docs/thermal_static_gradient.jpg" width="100%">
+      <img src="docs/thermal_static_gradient.png" width="100%">
       <br><em>Fig 2. Temperature Gradient Profile</em>
     </td>
   </tr>

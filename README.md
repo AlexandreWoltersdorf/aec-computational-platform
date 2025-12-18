@@ -15,8 +15,35 @@ Bridges to external software. I don't model manually here; I pull data from **Sp
 *   **Role:** Normalize raw geometry into the Core format.
 
 ### 2. Core (Pivot)
-The heart of the system. Once ingested, data becomes a **`WallBuildUp`**.
-*   **Role:** Define the standard object (Structure + Layers) independent of the source software.
+
+The heart of the system. Once ingested, raw geometry acts as a seed to generate a semantic `WallBuildUp` object. 
+
+This module acts as the **Single Source of Truth**, decoupling the input source (Rhino/Revit) from the analysis solvers. It enforces a strict physical architecture based on construction logic rather than just geometric layers:
+
+*   **External Layers:** Weather protection & thermal envelope (defined relative to the structure's outer face).
+*   **Structural Core:** The load-bearing reference (Lattice, CLT, or Concrete).
+*   **Internal Layers:** Service cavities & finishes (defined relative to the structure's inner face).
+
+<!-- GALERIE D'IMAGES - Remplace les liens src par tes noms de fichiers -->
+<table border="0">
+  <tr>
+    <td width="33%" align="center">
+      <img src="docs/buildup_3d_view.png" alt="3D View" width="100%">
+      <br>
+      <em>The Structural Core</em>
+    </td>
+    <td width="33%" align="center">
+      <img src="docs/buildup_vertical_view.png" alt="Vertical" width="100%">
+      <br>
+      <em>Int/Ext Separation</em>
+    </td>
+    <td width="33%" align="center">
+      <img src="docs/buildup_horizontal_view.png" alt="Horizontal" width="100%">
+      <br>
+      <em>WallBuildUp Object</em>
+    </td>
+  </tr>
+</table>
 
 ### 3. Solvers (Output)
 Engines that consume the Core object to generate results.

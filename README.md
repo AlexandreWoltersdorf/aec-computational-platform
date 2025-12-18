@@ -27,20 +27,20 @@ This module acts as the **Single Source of Truth**, decoupling the input source 
 <!-- GALERIE D'IMAGES - Remplace les liens src par tes noms de fichiers -->
 <table border="0">
   <tr>
-    <td width="33%" align="center">
+    <td width="50%" align="center">
       <img src="docs/buildup_3d_view.png" alt="3D View" width="100%">
       <br>
-      <em>The Structural Core</em>
+      <em>3D</em>
     </td>
-    <td width="33%" align="center">
+    <td width="25%" align="center">
       <img src="docs/buildup_vertical_view.png" alt="Vertical" width="100%">
       <br>
-      <em>Int/Ext Separation</em>
+      <em>Side view</em>
     </td>
-    <td width="33%" align="center">
+    <td width="25%" align="center">
       <img src="docs/buildup_horizontal_view.png" alt="Horizontal" width="100%">
       <br>
-      <em>WallBuildUp Object</em>
+      <em>Top view</em>
     </td>
   </tr>
 </table>

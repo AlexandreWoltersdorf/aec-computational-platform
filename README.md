@@ -28,15 +28,15 @@ Engines that consume the Core object to generate results.
 ## 📂 Repository Structure
 
 aec-computational-platform/
-├── connectors/ # Bridges to the outside world
-│ ├── speckle.py
-│ └── rhino.py
+├── connectors/           # [INPUT] Bridges to external software
+│   ├── speckle.py
+│   └── rhino.py
 │
-├── core/ # The Standard (The Pivot)
-│ ├── elements.py # WallBuildUp Class
-│ └── materials.py # Material Database
+├── core/                 # [PIVOT] Standardized Python Objects
+│   ├── elements.py       # WallBuildUp Class definition
+│   └── materials.py      # Physical Material Database
 │
-└── solvers/ # The Engines
-├── acoustics/ # ISO 10140 Simulation & Viz
-├── thermal/ # Heat transfer
-└── fabrication/ # Cutting lists & CNC data
+└── solvers/              # [OUTPUT] Analysis & Fabrication Engines
+    ├── acoustics/        # ISO 10140 Simulation & Visualization
+    ├── thermal/          # Heat transfer calculation
+    └── fabrication/      # Cutting lists (BOM) & CNC data
